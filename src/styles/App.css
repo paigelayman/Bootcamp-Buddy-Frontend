@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+.grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1em;
+  margin-top: 4em;
+}
+
+.col-3 {
+  grid-template-columns: 3fr 10fr 1fr;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
