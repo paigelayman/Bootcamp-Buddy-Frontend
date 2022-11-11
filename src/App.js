@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
+import Register from "./pages/Register";
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -26,6 +27,7 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
     </div>
