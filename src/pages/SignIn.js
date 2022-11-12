@@ -7,9 +7,18 @@ const SignIn = () => {
     email: "",
     password: ""
   });
+  const [isShowPassword, toggleIsShowPassword] = useState(false);
   let navigate = useNavigate();
 
   // Function
+  const handlePasswordToggle = (e) => {
+    if (e.target.checked) {
+      toggleIsShowPassword(true);
+      setFormValues({ ...formValues, confirmPassword: "" });
+    } else {
+      toggleIsShowPassword(false);
+    }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     //do await login function for user
@@ -20,11 +29,58 @@ const SignIn = () => {
     navigate("/");
   };
 
+  const handleRegister = () => {
+    navigate("/register");
+  };
+
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
   // Render
+  let passwordFieldRender = (
+    <div>
+      <label>Password:</label>{" "}
+      <input
+        onChange={handleChange}
+        value={formValues.password}
+        name="password"
+        type="password"
+        required
+      />
+      <input
+        onChange={handlePasswordToggle}
+        value={isShowPassword}
+        name="isShowPassword"
+        type="checkbox"
+      />
+      <label>Show Password</label>
+      <br />
+    </div>
+  );
+  if (isShowPassword) {
+    passwordFieldRender = (
+      <div>
+        <label>Password:</label>{" "}
+        <input
+          onChange={handleChange}
+          value={formValues.password}
+          name="password"
+          type="text"
+          required
+        />
+        <input
+          onChange={handlePasswordToggle}
+          value={isShowPassword}
+          name="isShowPassword"
+          type="checkbox"
+        />
+        <label>Show Password</label>
+        <br />
+      </div>
+    );
+  }
+
   let signInRender = (
     <div>
       <div>Sign in form</div>
@@ -38,16 +94,13 @@ const SignIn = () => {
           placeholder="john.doe@email.com"
         />
         <br />
-        <label>Password: </label>{" "}
-        <input
-          onChange={handleChange}
-          value={formValues.password}
-          name="password"
-          type="password"
-        />
-        <br />
+        {passwordFieldRender}
         <button>Login</button>
       </form>
+      <div>
+        Don't have account?{" "}
+        <button onClick={handleRegister}>Create account</button>
+      </div>
     </div>
   );
   let toRender = (

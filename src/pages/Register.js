@@ -61,7 +61,7 @@ const Register = () => {
       />
       <input
         onChange={handlePasswordToggle}
-        value={formValues.isShowPassword}
+        value={isShowPassword}
         name="isShowPassword"
         type="checkbox"
       />
@@ -91,7 +91,7 @@ const Register = () => {
         />
         <input
           onChange={handlePasswordToggle}
-          value={formValues.isShowPassword}
+          value={isShowPassword}
           name="isShowPassword"
           type="checkbox"
         />
