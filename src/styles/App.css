@@ -1,53 +1,70 @@
 .App {
   text-align: center;
-  color: #ADEEE3, #86DEB7, #63B995, #50723C, #423E28
-
+  color: #ADEEE3, #86DEB7, #63B995, #50723C, #423E28;
   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.container {
+  background-color: #adeee3;
+ color:black;
+ flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo{
+
+grid-area: logo ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 250px;
+weight: 250px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+
+grid-area: header;
+background-color: #86DEB7;
+}
+
+nav{
+  width:3000px;
+  font-size: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  color:#50723C;
+  justify-content: space-evenly;
+
 }
 
-.App-link {
-  color: #61dafb;
+link{
+  padding: 20px;
 }
 
-.grid {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 1em;
-  margin-top: 4em;
+li :hover {
+  background-color: #50723C;
 }
 
-.col-3 {
-  grid-template-columns: 3fr 10fr 1fr;
+.logo-wrapper{
+grid-area: nav;
+}
+.content{
+
+ grid-area: content;
+ display: flex;
+ flex-wrap: wrap;
+}
+.footer{
+
+ grid-area: footer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.welcome {
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) url("https://us.123rf.com/450wm/tatus/tatus1412/tatus141200001/34192460-seamless-camouflage-pattern.jpg?ver=6");
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  position: relative
 }
