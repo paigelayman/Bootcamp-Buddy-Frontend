@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import SignIn from "./pages/SignIn";
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -28,6 +29,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/signin" element={<SignIn />} />
         </Routes>
       </main>
     </div>
