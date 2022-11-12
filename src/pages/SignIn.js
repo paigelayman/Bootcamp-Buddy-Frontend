@@ -95,11 +95,13 @@ const SignIn = () => {
         />
         <br />
         {passwordFieldRender}
-        <button className="signin-button">Login</button>
+        <button className="login-button">Login</button>
       </form>
       <div className="signin-form">
         Don't have account?{' '}
-        <button onClick={handleRegister}>Create account</button>
+        <button onClick={handleRegister} className="create-button">
+          Create account
+        </button>
       </div>
     </div>
   )

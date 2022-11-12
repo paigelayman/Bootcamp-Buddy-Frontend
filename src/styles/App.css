@@ -101,6 +101,12 @@ grid-area: nav;
   padding: 10px;
 }
 
-.signin-button {
+.login-button  {
   margin: 10px;
+  cursor: pointer;
+}
+
+.create-button {
+  margin: 10px;
+  cursor: pointer;
 }
