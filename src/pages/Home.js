@@ -31,9 +31,9 @@ const Home = () => {
   }
 
   let toRender = (
-    <div className="welcome">
-      <div>Welcome to Bootcamp Buddy</div>
-      {bootcampListRender}
+    <div>
+      <div className="welcome">Welcome to Bootcamp Buddy</div>
+      <div className="bootcamp-list">{bootcampListRender}</div>
     </div>
   )
 
