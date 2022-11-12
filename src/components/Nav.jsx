@@ -35,6 +35,11 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
             />
           </div>
         </Link>
+        <ul>
+        <Link to="/">Home</Link>
+        <Link to="/register">Register</Link>
+        <Link to="/signin">Sign In</Link>
+        </ul>
         {authenticated && user ? authenticatedOptions : publicOptions}
       </header>
     )
