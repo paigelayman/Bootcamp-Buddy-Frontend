@@ -85,3 +85,22 @@ grid-area: nav;
   font-size: 30px;
   font-weight: 700;
 }
+
+.signin-container {
+  display: flex inline-block;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.signin-form {
+  display: flex inline-block;
+  background-color: darkgray;
+  width: 400px;
+  padding: 10px;
+}
+
+.signin-button {
+  margin: 10px;
+}
