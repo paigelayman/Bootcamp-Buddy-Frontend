@@ -48,6 +48,7 @@ const Register = () => {
       passwordMatchRender = <div>Password did not match!</div>;
     }
   }
+
   let passwordFieldRender = (
     <div>
       <label>Password:</label>{" "}
@@ -60,7 +61,7 @@ const Register = () => {
       />
       <input
         onChange={handlePasswordToggle}
-        value={formValues.isShowPassword}
+        value={isShowPassword}
         name="isShowPassword"
         type="checkbox"
       />
@@ -77,7 +78,6 @@ const Register = () => {
       {passwordMatchRender} <br />
     </div>
   );
-  console.log("check", isShowPassword);
   if (isShowPassword) {
     passwordFieldRender = (
       <div>
@@ -91,7 +91,7 @@ const Register = () => {
         />
         <input
           onChange={handlePasswordToggle}
-          value={formValues.isShowPassword}
+          value={isShowPassword}
           name="isShowPassword"
           type="checkbox"
         />
