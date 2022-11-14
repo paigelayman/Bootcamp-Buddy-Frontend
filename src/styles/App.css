@@ -1,8 +1,12 @@
+
 .App {
   text-align: center;
   color: #ADEEE3, #86DEB7, #63B995, #50723C, #423E28;
   font-family: 'Nanum Gothic Coding', monospace;
-  
+
+}
+body{
+  background-color: black;
 }
 
 .container {
@@ -17,8 +21,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-height: 250px;
-width: 250px;
+height: 350px;
+width: 350px;
 }
 
 header{
@@ -28,12 +32,11 @@ background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("https://us.123
 align-items: center;
 padding:30px 10%;
 box-shadow: 0 0 100px #50723C;
-
 }
 
 nav, li{
   text-decoration: none;
-  font-size: 20px;
+  font-size: 50px;
   display: flex;
   justify-content: flex-end;
   color:#ADEEE3;
@@ -43,7 +46,7 @@ nav, li{
   margin-right: 30px;
   background-color: #423E28;
   width:9000px;
-  height:50px;
+  height: 75px;
 }
 
 ul{
@@ -54,12 +57,10 @@ ul{
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 1600px) {
 .home-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  align-items: center;
-  justify-content: center;
   grid-gap: 16px;
 }
 }
@@ -75,7 +76,14 @@ ul{
  border-radius: 25px;
  border: #423E28;
  border-style: double;
+ background-color: #423E28;
+ box-shadow: 10px 10px 5px ;
+}
 
+.bootcamp-card:hover{
+  -ms-transform: scale(1.3); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3);
 }
 .bootcamp-name{
   display: flex;
@@ -85,17 +93,31 @@ ul{
   height: 250px;
   width: 250px;
   margin: 20px auto;
+  font-size: 55px;
+  flex-shrink: inherit;
+  color:#adeee3;
+  background-image:  url("https://us.123rf.com/450wm/tatus/tatus1412/tatus141200001/34192460-seamless-camouflage-pattern.jpg?ver=6");
+  border: #50723C;
+  border-style: outset;
+  border-width: 15px;
+
+  
 }
+
+
 
 .bootcamp-description{
 font-size:30px;
+color:#63B995;
 
 }
 
 .welcome {
-  color: #423E28;
+  color: darkgreen;
   font-size: 70px;
   font-weight: 700;
+
+
 }
 
 

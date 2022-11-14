@@ -32,7 +32,7 @@ const Home = () => {
 
   let toRender = (
     <div>
-      <div className="welcome">Welcome to Bootcamp Buddy</div>
+      <div className="welcome"></div>
       <div className="bootcamp-list">{bootcampListRender}</div>
     </div>
   )
