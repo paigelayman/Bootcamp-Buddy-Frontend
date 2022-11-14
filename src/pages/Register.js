@@ -105,7 +105,11 @@ const Register = () => {
     )
   }
 
-  let registerButtonRender = <button disabled>Register</button>
+  let registerButtonRender = (
+    <button disabled className="register-button">
+      Register
+    </button>
+  )
   if (
     formValues.firstName &&
     formValues.lastName &&
@@ -113,9 +117,13 @@ const Register = () => {
     formValues.password
   ) {
     if (isShowPassword) {
-      registerButtonRender = <button>Register</button>
+      registerButtonRender = (
+        <button className="register-button">Register</button>
+      )
     } else if (formValues.password === formValues.confirmPassword) {
-      registerButtonRender = <button>Register</button>
+      registerButtonRender = (
+        <button className="register-button">Register</button>
+      )
     }
   }
 
