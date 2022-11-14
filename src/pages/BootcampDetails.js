@@ -9,14 +9,13 @@ const BootcampDetails = (props) => {
   useEffect(() => {
     const getSelectedBootcamp = () => {
       //do axios call to get a bootcamp object based on the id
-      console.log(bootcampId);
       const tempBootCampObject = {
         id: 1,
         name: "General Assembly",
         website:
           "https://generalassemb.ly/education/software-engineering-immersive-remote",
         location: "New, NY",
-        remote: true,
+        remote: false,
         shortDescription:
           "Your best course for career transformation in tech. This full-time online coding bootcamp features expert instruction, one-on-one career coaching, and connections to top employers to get you hired.",
         description:
@@ -41,7 +40,9 @@ const BootcampDetails = (props) => {
         <div>Decription: {bootcampObject.description}</div>
         <div>Website: {bootcampObject.website}</div>
         <div>Location: {bootcampObject.location}</div>
-        <div>Remote option: </div>
+        <div>
+          Remote option {bootcampObject.remote ? "is" : "is not"} available.
+        </div>
       </div>
     );
   }
@@ -54,11 +55,19 @@ const BootcampDetails = (props) => {
 
   let bootcampDetailsRender = (
     <div>
-      <div>Bootcamp Name</div>
-      {bootcampDemoDataRender}
-      {bootcampCommentRender}
+      <div></div>
     </div>
   );
+
+  if (bootcampObject) {
+    bootcampDetailsRender = (
+      <div>
+        <div>{bootcampObject.name}</div>
+        {bootcampDemoDataRender}
+        {bootcampCommentRender}
+      </div>
+    );
+  }
 
   let toRender = (
     <div>
