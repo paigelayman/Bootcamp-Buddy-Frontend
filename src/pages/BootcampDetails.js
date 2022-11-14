@@ -10,7 +10,7 @@ const BootcampDetails = (props) => {
 
   let bootcampCommentRender = (
     <div>
-      <div>Bootcamp comment: </div>
+      <div>Bootcamp comment: 1</div>
     </div>
   );
 
