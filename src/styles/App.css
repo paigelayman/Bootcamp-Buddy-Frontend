@@ -130,3 +130,28 @@ ul{
   width: 100%;
   font-size: 14px;
 }
+
+.register-container {
+  display: flex inline-flex;
+  justify-content: center;
+  width: 500px;
+  padding-left: 30%;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.register-header {
+  margin-bottom: 15px;
+}
+
+.register-label {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.register-button {
+  width: 100%;
+  font-size: 18px;
+}
