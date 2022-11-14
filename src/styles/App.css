@@ -130,3 +130,14 @@ ul{
   width: 100%;
   font-size: 14px;
 }
+
+.register-container {
+  display: flex inline-flex;
+  justify-content: center;
+  width: 500px;
+}
+
+.register-label {
+  display: flex;
+  justify-content: flex-start;
+}
