@@ -1,46 +1,46 @@
-import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const SignIn = () => {
   // variable
   const [formValues, setFormValues] = useState({
-    email: "",
-    password: ""
-  });
-  const [isShowPassword, toggleIsShowPassword] = useState(false);
-  let navigate = useNavigate();
+    email: '',
+    password: ''
+  })
+  const [isShowPassword, toggleIsShowPassword] = useState(false)
+  let navigate = useNavigate()
 
   // Function
   const handlePasswordToggle = (e) => {
     if (e.target.checked) {
-      toggleIsShowPassword(true);
-      setFormValues({ ...formValues, confirmPassword: "" });
+      toggleIsShowPassword(true)
+      setFormValues({ ...formValues, confirmPassword: '' })
     } else {
-      toggleIsShowPassword(false);
+      toggleIsShowPassword(false)
     }
-  };
+  }
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     //do await login function for user
     setFormValues({
-      email: "",
-      password: ""
-    });
-    navigate("/");
-  };
+      email: '',
+      password: ''
+    })
+    navigate('/')
+  }
 
   const handleRegister = () => {
-    navigate("/register");
-  };
+    navigate('/register')
+  }
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
-  };
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+  }
 
   // Render
   let passwordFieldRender = (
     <div>
-      <label>Password:</label>{" "}
+      <label>Password</label>{' '}
       <input
         onChange={handleChange}
         value={formValues.password}
@@ -49,6 +49,7 @@ const SignIn = () => {
         required
       />
       <input
+        className="checkbox"
         onChange={handlePasswordToggle}
         value={isShowPassword}
         name="isShowPassword"
@@ -57,11 +58,11 @@ const SignIn = () => {
       <label>Show Password</label>
       <br />
     </div>
-  );
+  )
   if (isShowPassword) {
     passwordFieldRender = (
       <div>
-        <label>Password:</label>{" "}
+        <label>Password</label>{' '}
         <input
           onChange={handleChange}
           value={formValues.password}
@@ -78,38 +79,42 @@ const SignIn = () => {
         <label>Show Password</label>
         <br />
       </div>
-    );
+    )
   }
 
   let signInRender = (
-    <div>
-      <div>Sign in form</div>
-      <form onSubmit={handleSubmit}>
-        <label>Email: </label>{" "}
-        <input
-          onChange={handleChange}
-          value={formValues.email}
-          name="email"
-          type="email"
-          placeholder="john.doe@email.com"
-        />
+    <div className="signin-container">
+      <div className="signin-form">to your account here</div>
+      <form onSubmit={handleSubmit} className="signin-form">
+        <div className="email-form">
+          <label>Email </label>{' '}
+          <input
+            onChange={handleChange}
+            value={formValues.email}
+            name="email"
+            type="email"
+            placeholder="john.doe@email.com"
+          />
+        </div>
         <br />
         {passwordFieldRender}
-        <button>Login</button>
+        <button className="login-button">Login</button>
       </form>
-      <div>
-        Don't have account?{" "}
-        <button onClick={handleRegister}>Create account</button>
+      <div className="signin-form">
+        Don't have account?{' '}
+        <button onClick={handleRegister} className="create-button">
+          Create account
+        </button>
       </div>
     </div>
-  );
+  )
   let toRender = (
     <div>
-      <div>This is a sign in page</div>
+      <div>Sign in</div>
       {signInRender}
     </div>
-  );
-  return toRender;
-};
+  )
+  return toRender
+}
 
-export default SignIn;
+export default SignIn
