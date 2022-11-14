@@ -52,7 +52,7 @@ const Register = () => {
   let passwordFieldRender = (
     <div>
       <div className="register-label">
-        <label>Password:</label>{' '}
+        <label>Password: </label>{' '}
         <input
           onChange={handleChange}
           value={formValues.password}
@@ -70,7 +70,7 @@ const Register = () => {
       </div>
       <br />
       <div className="register-label">
-        <label>Confirm Password:</label>{' '}
+        <label>Confirm Password: </label>{' '}
         <input
           onChange={handleChange}
           value={formValues.confirmPassword}
@@ -85,7 +85,7 @@ const Register = () => {
   if (isShowPassword) {
     passwordFieldRender = (
       <div>
-        <label>Password:</label>{' '}
+        <label>Password: </label>{' '}
         <input
           onChange={handleChange}
           value={formValues.password}
@@ -123,7 +123,7 @@ const Register = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="register-label">
-          <label>First Name:</label>{' '}
+          <label>First Name: </label>{' '}
           <input
             onChange={handleChange}
             value={formValues.firstName}
@@ -135,7 +135,7 @@ const Register = () => {
         </div>
         <br />
         <div className="register-label">
-          <label>Last Name:</label>{' '}
+          <label>Last Name: </label>{' '}
           <input
             onChange={handleChange}
             value={formValues.lastName}
@@ -147,7 +147,7 @@ const Register = () => {
         </div>
         <br />
         <div className="register-label">
-          <label>Email:</label>{' '}
+          <label>Email: </label>{' '}
           <input
             onChange={handleChange}
             value={formValues.email}
@@ -165,7 +165,7 @@ const Register = () => {
   )
   let toRender = (
     <div className="register-container">
-      <div>This is register page</div>
+      <div className="register-header">Create your account below</div>
       {registerFormRender}
     </div>
   )
