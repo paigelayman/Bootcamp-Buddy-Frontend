@@ -21,7 +21,7 @@ const Home = () => {
   let bootcampListRender = <div></div>;
   if (bootcampList) {
     bootcampListRender = (
-      <div className="grid">
+      <div className="home-wrapper">
         {bootcampList.map((bootcamp) => (
           <BootcampCard key={bootcamp.id} bootcamp={bootcamp} />
         ))}

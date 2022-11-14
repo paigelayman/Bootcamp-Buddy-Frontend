@@ -6,10 +6,10 @@ const BootcampCard = ({bootcamp}) => {
         navigate(`/bootcamp/${bootcamp.id}`);
     }
     return (
-        <div className="grid col-3">
+        <div className="bootcamp-card">
             <div className="bootcamp-name" onClick={handleClick}>{bootcamp.name}</div>
-            <div onClick={handleClick}>{bootcamp.shortDescription}</div>
-            <button>Join</button>
+            <div className="bootcamp-description" onClick={handleClick}>{bootcamp.shortDescription}</div>
+            <button className="join">Join</button>
         </div>
     )
 }

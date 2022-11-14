@@ -52,43 +52,50 @@ ul{
   padding-right:10px
 }
 
-.logo-wrapper{
 
-}
-
-.grid {
+@media (min-width: 800px) {
+.home-wrapper {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   justify-content: center;
-  grid-gap: 1em;
-  margin-top: 4em;
-  background-size: cover;
-  background-position: center center;
-  position: relative
+  grid-gap: 16px;
+}
 }
 
-.col-3 {
-  grid-template-columns: 3fr 10fr 1fr;
+.bootcamp-card{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding:30px;
+ background-color: #86DEB7;
+ height: 500px;
+ width: 800px;
+ margin: 20px;
+ border-radius: 25px;
+ border: #423E28;
+ border-style: double;
+
+}
+.bootcamp-name{
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #50723C;
+  height: 250px;
+  width: 250px;
+  margin: 20px auto;
+}
+
+.bootcamp-description{
+font-size:30px;
+
 }
 
 .welcome {
   color: #423E28;
   font-size: 70px;
   font-weight: 700;
-}
-
-.bootcamp-list{
-  background-color: #86DEB7;
-}
-
-.bootcamp-name{
-  display: flex;
-  background-color: #50723C;
-  border-radius: 50%;
-  height:100px;
-  width: 100px;
-  align-items: center;
-  margin: 20px;
 }
 
 .login-button  {
