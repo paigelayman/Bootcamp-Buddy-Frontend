@@ -5,7 +5,6 @@
   
 }
 
-
 .container {
   background-color: #adeee3;
  color:black;
@@ -29,7 +28,6 @@ background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("https://us.123
 align-items: center;
 padding:30px 10%;
 box-shadow: 0 0 100px #50723C;
-
 }
 
 nav, li{
@@ -54,11 +52,9 @@ ul{
   padding-right:10px
 }
 
-
 .logo-wrapper{
 
 }
-
 
 .grid {
   display: grid;
@@ -81,26 +77,19 @@ ul{
   font-weight: 700;
 }
 
-/* .signin-container {
-  display: flex inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  height: 500px;
-  padding-left: 300px;
-  margin: 20px 0;
-} */
+.bootcamp-list{
+  background-color: #86DEB7;
+}
 
-/* .signin-form {
-  background-color: darkgray;
-  width: 400px;
-  padding: 10px;
-} */
-
-/* .email-form {
+.bootcamp-name{
   display: flex;
-  justify-content: flex-start;
-} */
+  background-color: #50723C;
+  border-radius: 50%;
+  height:100px;
+  width: 100px;
+  align-items: center;
+  margin: 20px;
+}
 
 .login-button  {
   font-size: 14px;

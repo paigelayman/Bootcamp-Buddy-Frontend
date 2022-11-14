@@ -7,7 +7,7 @@ const BootcampCard = ({bootcamp}) => {
     }
     return (
         <div className="grid col-3">
-            <div onClick={handleClick}>{bootcamp.name}</div>
+            <div className="bootcamp-name" onClick={handleClick}>{bootcamp.name}</div>
             <div onClick={handleClick}>{bootcamp.shortDescription}</div>
             <button>Join</button>
         </div>
