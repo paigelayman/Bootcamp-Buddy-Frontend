@@ -80,3 +80,64 @@ ul{
   font-size: 70px;
   font-weight: 700;
 }
+
+/* .signin-container {
+  display: flex inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height: 500px;
+  padding-left: 300px;
+  margin: 20px 0;
+} */
+
+/* .signin-form {
+  background-color: darkgray;
+  width: 400px;
+  padding: 10px;
+} */
+
+/* .email-form {
+  display: flex;
+  justify-content: flex-start;
+} */
+
+.login-button  {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+  width: 50%;
+  cursor: pointer;
+}
+
+.create-button {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.signin-container {
+  padding: 0;
+  margin: 0
+}
+
+.signin-form {
+  display: flex inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+}
+
+.signin-form label {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.signin-form input {
+  width: 100%;
+  font-size: 14px;
+}
