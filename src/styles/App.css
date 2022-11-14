@@ -80,3 +80,18 @@ ul{
   font-size: 70px;
   font-weight: 700;
 }
+
+.bootcamp-list{
+  background-color: #86DEB7;
+}
+
+.bootcamp-name{
+  display: flex;
+  background-color: #50723C;
+  border-radius: 50%;
+  height:100px;
+  width: 100px;
+  align-items: center;
+  margin: 20px;
+}
+
