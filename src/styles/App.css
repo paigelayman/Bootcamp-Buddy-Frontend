@@ -28,7 +28,6 @@ background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("https://us.123
 align-items: center;
 padding:30px 10%;
 box-shadow: 0 0 100px #50723C;
-
 }
 
 nav, li{
@@ -63,6 +62,7 @@ ul{
   grid-gap: 16px;
 }
 }
+
 .bootcamp-card{
  display: flex;
  flex-direction: column;
@@ -97,7 +97,6 @@ font-size:30px;
   font-size: 70px;
   font-weight: 700;
 }
-
 
 .login-button  {
   font-size: 14px;
@@ -137,4 +136,29 @@ font-size:30px;
 .signin-form input {
   width: 100%;
   font-size: 14px;
+}
+
+.register-container {
+  display: flex inline-flex;
+  justify-content: center;
+  width: 500px;
+  padding-left: 30%;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.register-header {
+  margin-bottom: 15px;
+}
+
+.register-label {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.register-button {
+  width: 100%;
+  font-size: 18px;
 }
