@@ -40,7 +40,7 @@ const SignIn = () => {
   // Render
   let passwordFieldRender = (
     <div>
-      <label>Password:</label>{' '}
+      <label>Password</label>{' '}
       <input
         onChange={handleChange}
         value={formValues.password}
@@ -49,6 +49,7 @@ const SignIn = () => {
         required
       />
       <input
+        className="checkbox"
         onChange={handlePasswordToggle}
         value={isShowPassword}
         name="isShowPassword"
@@ -61,7 +62,7 @@ const SignIn = () => {
   if (isShowPassword) {
     passwordFieldRender = (
       <div>
-        <label>Password:</label>{' '}
+        <label>Password</label>{' '}
         <input
           onChange={handleChange}
           value={formValues.password}
@@ -83,16 +84,18 @@ const SignIn = () => {
 
   let signInRender = (
     <div className="signin-container">
-      <div className="signin-form">Please Sign-in</div>
+      <div className="signin-form">to your account here</div>
       <form onSubmit={handleSubmit} className="signin-form">
-        <label>Email: </label>{' '}
-        <input
-          onChange={handleChange}
-          value={formValues.email}
-          name="email"
-          type="email"
-          placeholder="john.doe@email.com"
-        />
+        <div className="email-form">
+          <label>Email </label>{' '}
+          <input
+            onChange={handleChange}
+            value={formValues.email}
+            name="email"
+            type="email"
+            placeholder="john.doe@email.com"
+          />
+        </div>
         <br />
         {passwordFieldRender}
         <button className="login-button">Login</button>
@@ -107,7 +110,7 @@ const SignIn = () => {
   )
   let toRender = (
     <div>
-      <div>This is a sign in page</div>
+      <div>Sign in</div>
       {signInRender}
     </div>
   )
