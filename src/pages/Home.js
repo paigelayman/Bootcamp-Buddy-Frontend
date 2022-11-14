@@ -1,25 +1,24 @@
-import { GetBootcampList } from '../services/GetServices'
-import { useEffect, useState } from 'react'
-import BootcampCard from '../components/BootcampCard'
+import { GetBootcampList } from "../services/GetServices";
+import { useEffect, useState } from "react";
+import BootcampCard from "../components/BootcampCard";
 
 const Home = () => {
-  const [bootcampList, setBootcampList] = useState(null)
+  const [bootcampList, setBootcampList] = useState(null);
 
   useEffect(() => {
     const getAllBootcamp = async () => {
-      const bootcampsData = await GetBootcampList()
-      setBootcampList(bootcampsData)
-    }
-    getAllBootcamp()
-  }, [])
+      const bootcampsData = await GetBootcampList();
+      setBootcampList(bootcampsData);
+    };
+    getAllBootcamp();
+  }, []);
 
   useEffect(() => {
     if (bootcampList) {
-      console.log('this', bootcampList)
     }
-  }, [bootcampList])
+  }, [bootcampList]);
 
-  let bootcampListRender = <div></div>
+  let bootcampListRender = <div></div>;
   if (bootcampList) {
     bootcampListRender = (
       <div className="home-wrapper">
@@ -27,7 +26,7 @@ const Home = () => {
           <BootcampCard key={bootcamp.id} bootcamp={bootcamp} />
         ))}
       </div>
-    )
+    );
   }
 
   let toRender = (
@@ -35,8 +34,8 @@ const Home = () => {
       <div className="welcome"></div>
       <div className="bootcamp-list">{bootcampListRender}</div>
     </div>
-  )
+  );
 
-  return toRender
-}
-export default Home
+  return toRender;
+};
+export default Home;
