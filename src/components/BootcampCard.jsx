@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const BootcampCard = ({bootcamp}) => {
     let navigate = useNavigate();
     const handleClick = () => {
-        navigate("/bootcamp/1");
+        navigate(`/bootcamp/${bootcamp.id}`);
     }
     return (
         <div className="grid col-3">
