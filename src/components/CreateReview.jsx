@@ -6,7 +6,10 @@ const CreateReview = (props) => {
         setReview(e.target.value)
     }
     let handleSubmit = () => {
-
+        // do submit api call
+        
+        // clean review
+        setReview("")
     }
     return (
         <div className="">
