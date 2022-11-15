@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import CreateReview from "../components/CreateReview";
 import ReviewCard from "../components/ReviewCard";
 
 const BootcampDetails = (props) => {
@@ -89,6 +90,7 @@ const BootcampDetails = (props) => {
         {reviewList.map((review) => (
           <ReviewCard key={review.id} review={review} />
         ))}
+        <CreateReview />
       </div>
     );
   }
