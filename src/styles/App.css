@@ -70,15 +70,12 @@ ul{
  flex-direction: column;
  align-items: center;
  padding:30px;
- background-color: #86DEB7;
  height: 500px;
  width: 800px;
  margin: 20px;
  border-radius: 25px;
- background-color: black;
  background-color: #423E28;
  box-shadow: 10px 10px 5px ;
- background-color: black;
 }
 
 .bootcamp-card:hover{
