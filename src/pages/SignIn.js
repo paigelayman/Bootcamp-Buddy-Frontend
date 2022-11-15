@@ -1,46 +1,51 @@
-import { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import { SignInUser } from "../services/Auth";
 
-const SignIn = () => {
+const SignIn = ({ setUser, toggleAuthenticated }) => {
   // variable
   const [formValues, setFormValues] = useState({
-    email: '',
-    password: ''
-  })
-  const [isShowPassword, toggleIsShowPassword] = useState(false)
-  let navigate = useNavigate()
+    email: "",
+    password: ""
+  });
+  const [isShowPassword, toggleIsShowPassword] = useState(false);
+  let navigate = useNavigate();
 
   // Function
   const handlePasswordToggle = (e) => {
     if (e.target.checked) {
-      toggleIsShowPassword(true)
-      setFormValues({ ...formValues, confirmPassword: '' })
+      toggleIsShowPassword(true);
+      setFormValues({ ...formValues, confirmPassword: "" });
     } else {
-      toggleIsShowPassword(false)
+      toggleIsShowPassword(false);
     }
-  }
+  };
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    //do await login function for user
+    e.preventDefault();
+    console.log("value", formValues);
+    const payload = await SignInUser(formValues);
+    console.log(payload);
     setFormValues({
-      email: '',
-      password: ''
-    })
-    navigate('/')
-  }
+      email: "",
+      password: ""
+    });
+    setUser(payload);
+    toggleAuthenticated(true);
+    navigate("/");
+  };
 
   const handleRegister = () => {
-    navigate('/register')
-  }
+    navigate("/register");
+  };
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value })
-  }
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
 
   // Render
   let passwordFieldRender = (
     <div>
-      <label>Password</label>{' '}
+      <label>Password</label>{" "}
       <input
         onChange={handleChange}
         value={formValues.password}
@@ -58,11 +63,11 @@ const SignIn = () => {
       <label className="signin-showpass">Show Password</label>
       <br />
     </div>
-  )
+  );
   if (isShowPassword) {
     passwordFieldRender = (
       <div>
-        <label>Password</label>{' '}
+        <label>Password</label>{" "}
         <input
           onChange={handleChange}
           value={formValues.password}
@@ -80,7 +85,7 @@ const SignIn = () => {
         <label className="signin-showpass">Show Password</label>
         <br />
       </div>
-    )
+    );
   }
 
   let signInRender = (
@@ -88,7 +93,7 @@ const SignIn = () => {
       <div className="signin-form">to your account here</div>
       <form onSubmit={handleSubmit} className="signin-form">
         <div className="signin-label">
-          <label>Email </label>{' '}
+          <label>Email </label>{" "}
           <input
             onChange={handleChange}
             value={formValues.email}
@@ -102,20 +107,20 @@ const SignIn = () => {
         <button className="login-button">Login</button>
       </form>
       <div className="signin-form">
-        Don't have account?{' '}
+        Don't have account?{" "}
         <button onClick={handleRegister} className="create-button">
           Create account
         </button>
       </div>
     </div>
-  )
+  );
   let toRender = (
     <div className="signin-container">
       <div className="signin-form">Sign in</div>
       {signInRender}
     </div>
-  )
-  return toRender
-}
+  );
+  return toRender;
+};
 
-export default SignIn
+export default SignIn;
