@@ -49,13 +49,13 @@ const SignIn = () => {
         required
       />
       <input
-        className="checkbox"
+        className="signin-checkbox"
         onChange={handlePasswordToggle}
         value={isShowPassword}
         name="isShowPassword"
         type="checkbox"
       />
-      <label>Show Password</label>
+      <label className="signin-showpass">Show Password</label>
       <br />
     </div>
   )
@@ -71,22 +71,23 @@ const SignIn = () => {
           required
         />
         <input
+          className="signin-checkbox"
           onChange={handlePasswordToggle}
           value={isShowPassword}
           name="isShowPassword"
           type="checkbox"
         />
-        <label>Show Password</label>
+        <label className="signin-showpass">Show Password</label>
         <br />
       </div>
     )
   }
 
   let signInRender = (
-    <div className="signin-container">
+    <div>
       <div className="signin-form">to your account here</div>
       <form onSubmit={handleSubmit} className="signin-form">
-        <div className="email-form">
+        <div className="signin-label">
           <label>Email </label>{' '}
           <input
             onChange={handleChange}
@@ -109,8 +110,8 @@ const SignIn = () => {
     </div>
   )
   let toRender = (
-    <div>
-      <div>Sign in</div>
+    <div className="signin-container">
+      <div className="signin-form">Sign in</div>
       {signInRender}
     </div>
   )
