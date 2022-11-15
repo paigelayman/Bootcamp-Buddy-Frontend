@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import ReviewCard from "../components/ReviewCard";
 
 const BootcampDetails = (props) => {
   // Variable
   const [bootcampObject, updateBootcampObject] = useState(null);
   const { bootcampId } = useParams();
+  const [reviewList, setReviewList] = useState([]);
 
   useEffect(() => {
-    const getSelectedBootcamp = () => {
+    const getSelectedBootcamp = async () => {
       //do axios call to get a bootcamp object based on the id
       const tempBootCampObject = {
         id: 1,
@@ -23,7 +25,36 @@ const BootcampDetails = (props) => {
       };
       updateBootcampObject(tempBootCampObject);
     };
+    const getReviewList = async () => {
+      //do axios call to get the list of review for the selected bootcamp
+
+      const tempReviewList = [
+        {
+          id: 1,
+          userId: 1,
+          content:
+            "adasdakjdhasjkdhalskdjhaskjdhka alsdk jask jdhlaksd aksjdh lashdaksdh klash",
+          rating: 5
+        },
+        {
+          id: 10,
+          userId: 3,
+          content:
+            "aksjdhasd ajkshd kjash lskadj hflasd hfakldsfhla lajd flahj",
+          rating: 4
+        },
+        {
+          id: 12,
+          userId: 7,
+          content:
+            "alskdjhlakhjd alkdjal; djklajd asjdo lasjkd laksjld ;aks jdlaksjdal;s d;l",
+          rating: 5
+        }
+      ];
+      setReviewList(tempReviewList);
+    };
     getSelectedBootcamp();
+    getReviewList();
   }, []);
 
   let bootcampDemoDataRender = (
@@ -52,6 +83,15 @@ const BootcampDetails = (props) => {
       <div>Bootcamp comment: </div>
     </div>
   );
+  if (reviewList) {
+    bootcampCommentRender = (
+      <div>
+        {reviewList.map((review) => (
+          <ReviewCard key={review.id} review={review} />
+        ))}
+      </div>
+    );
+  }
 
   let bootcampDetailsRender = (
     <div>
