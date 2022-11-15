@@ -118,6 +118,8 @@ color:#63B995;
   width: 100%;
   height: 30px;
   font-family: 'Nanum Gothic Coding', monospace;
+  background-color: #f4b554;
+  color: #194648;
   border: none;
   cursor: pointer;
 }
@@ -127,7 +129,8 @@ color:#63B995;
   font-weight: bold;
   margin: 10px 0;
   font-family: 'Nanum Gothic Coding', monospace;
-  background-color: white;
+  background-color: #423e28;
+  color: white;
   border: none;
   cursor: pointer;
 }
@@ -136,10 +139,11 @@ color:#63B995;
   display: flex inline-flex;
   justify-content: center;
   width: 400px;
-  padding: 0 20px;
-  margin: 20px;
+  padding: 5px 20px;
+  margin: auto;
   font-size: 20px;
-  background-color: gray;
+  background-color: #423e28;
+  color: white;
 }
 
 .signin-form {
