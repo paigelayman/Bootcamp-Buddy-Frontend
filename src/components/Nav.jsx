@@ -27,6 +27,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       <header>
         <Link to="/">
           <div className="logo-wrapper" alt="logo">
+            <br></br>
             <img
               className="logo"
               src="https://i.imgur.com/HrcKgzc.png"
