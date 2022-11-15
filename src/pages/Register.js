@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import { RegisterUser } from "../services/Auth";
+import { RegisterUser, SignInUser } from "../services/Auth";
 
-const Register = () => {
+const Register = ({ setUser, toggleAuthenticated }) => {
   // Variables
   const [formValues, setFormValues] = useState({
     firstName: "",
@@ -26,7 +26,6 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     //do function await check email, if failed provide user
-    //do function await register, if failed, provide feedback
     await RegisterUser({
       firstName: formValues.firstName,
       lastName: formValues.lastName,
@@ -34,6 +33,12 @@ const Register = () => {
       password: formValues.password
     });
     //do await login function for user automatically to get the token session
+    const payload = await SignInUser({
+      email: formValues.email,
+      password: formValues.password
+    });
+    setUser(payload);
+    toggleAuthenticated(true);
     setFormValues({
       firstName: "",
       lastName: "",
