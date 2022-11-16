@@ -1,4 +1,4 @@
-import { GetBootcampList } from "../services/GetServices";
+import { GetBootcampList } from "../services/BootcampServices";
 import { useEffect, useState } from "react";
 import BootcampCard from "../components/BootcampCard";
 
