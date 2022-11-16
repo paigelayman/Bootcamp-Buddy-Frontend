@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import CreateReview from "../components/CreateReview";
 import ReviewCard from "../components/ReviewCard";
 import { GetReview } from "../services/ReviewServices";
+import { GetBoomcampDetail } from "../services/BootcampServices";
 
 const BootcampDetails = (props) => {
   // Variable
@@ -13,19 +14,20 @@ const BootcampDetails = (props) => {
   useEffect(() => {
     const getSelectedBootcamp = async () => {
       //do axios call to get a bootcamp object based on the id
-      const tempBootCampObject = {
-        id: 1,
-        name: "General Assembly",
-        website:
-          "https://generalassemb.ly/education/software-engineering-immersive-remote",
-        location: "New, NY",
-        remote: false,
-        shortDescription:
-          "Your best course for career transformation in tech. This full-time online coding bootcamp features expert instruction, one-on-one career coaching, and connections to top employers to get you hired.",
-        description:
-          "Your best course for career transformation in tech. This full-time online coding bootcamp features expert instruction, one-on-one career coaching, and connections to top employers to get you hired."
-      };
-      updateBootcampObject(tempBootCampObject);
+      let bootcamp = await GetBoomcampDetail(bootcampId);
+      //   const tempBootCampObject = {
+      //     id: 1,
+      //     name: "General Assembly",
+      //     website:
+      //       "https://generalassemb.ly/education/software-engineering-immersive-remote",
+      //     location: "New, NY",
+      //     remote: false,
+      //     shortDescription:
+      //       "Your best course for career transformation in tech. This full-time online coding bootcamp features expert instruction, one-on-one career coaching, and connections to top employers to get you hired.",
+      //     description:
+      //       "Your best course for career transformation in tech. This full-time online coding bootcamp features expert instruction, one-on-one career coaching, and connections to top employers to get you hired."
+      //   };
+      updateBootcampObject(bootcamp);
     };
     const getReviewList = async () => {
       //do axios call to get the list of review for the selected bootcamp
