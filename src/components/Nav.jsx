@@ -17,8 +17,8 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       <nav className="nav">
         <ul>
         {/* <Link to="/">Home</Link> */}
-        <Link to="/register" style={{textDecoration: 'none'}}><li>Register</li></Link>
-        <Link to="/signin" style={{textDecoration: 'none'}}><li>Sign In</li></Link>
+        <Link to="/register" style={{textDecoration: 'none'}}><li>Register |</li></Link>
+        <Link to="/signin" style={{textDecoration: 'none'}}><li>| Sign In</li></Link>
         </ul>
       </nav>
     )
