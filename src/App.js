@@ -1,14 +1,16 @@
-import logo from "./logo.svg";
-import "./styles/App.css";
-import "./styles/bootcampdetails.css";
-import "./styles/reviewCard.css";
-import { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
-import Nav from "./components/Nav";
-import Home from "./pages/Home";
-import Register from "./pages/Register";
-import SignIn from "./pages/SignIn";
-import BootcampDetails from "./pages/BootcampDetails";
+import logo from './logo.svg'
+import './styles/App.css'
+import './styles/bootcampdetails.css'
+import './styles/reviewCard.css'
+import './styles/Nav.css'
+import { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Nav from './components/Nav'
+import Home from './pages/Home'
+import Register from './pages/Register'
+import SignIn from './pages/SignIn'
+import BootcampDetails from './pages/BootcampDetails'
+
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false);
