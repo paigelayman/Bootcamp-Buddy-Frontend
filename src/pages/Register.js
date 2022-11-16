@@ -72,13 +72,17 @@ const Register = ({ setUser, toggleAuthenticated }) => {
           type="password"
           required
         />
-        <input
-          onChange={handlePasswordToggle}
-          value={isShowPassword}
-          name="isShowPassword"
-          type="checkbox"
-        />
-        <label>Show Password</label>
+      </div>
+      <div>
+        <label className="register-showpass">
+          <input
+            onChange={handlePasswordToggle}
+            value={isShowPassword}
+            name="isShowPassword"
+            type="checkbox"
+          />
+          Show Password
+        </label>
       </div>
       <br />
       <div className="register-label">
@@ -90,6 +94,7 @@ const Register = ({ setUser, toggleAuthenticated }) => {
           type="password"
           required
         />{' '}
+        <br />
       </div>
       {passwordMatchRender} <br />
     </div>
@@ -97,21 +102,28 @@ const Register = ({ setUser, toggleAuthenticated }) => {
   if (isShowPassword) {
     passwordFieldRender = (
       <div>
-        <label>Password </label>{' '}
-        <input
-          onChange={handleChange}
-          value={formValues.password}
-          name="password"
-          type="text"
-          required
-        />
-        <input
-          onChange={handlePasswordToggle}
-          value={isShowPassword}
-          name="isShowPassword"
-          type="checkbox"
-        />
-        <label>Show Password</label>
+        <div className="register-label">
+          <label>Password </label>{' '}
+          <input
+            onChange={handleChange}
+            value={formValues.password}
+            name="password"
+            type="text"
+            required
+          />
+        </div>
+        <div>
+          <label className="register-showpass">
+            <input
+              className="register-checkbox"
+              onChange={handlePasswordToggle}
+              value={isShowPassword}
+              name="isShowPassword"
+              type="checkbox"
+            />
+            Show Password
+          </label>
+        </div>
         <br />
       </div>
     )
