@@ -35,7 +35,15 @@ const CreateReview = ({userId,bootcampId}) => {
               onChange={handleChange}
               value={formValues.content}
             ></textarea>
+            <label className="" htmlFor="rating">Rating</label>
             <button onClick={handleSubmit} type="submit" className="">
+            <input
+          onChange={handleChange}
+          value={formValues.rating}
+          name="rating"
+          type="text"
+          required
+        />
               Submit
             </button>
           </div>
