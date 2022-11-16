@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import CreateReview from "../components/CreateReview";
 import ReviewCard from "../components/ReviewCard";
+import { GetReview } from "../services/ReviewServices";
 
 const BootcampDetails = (props) => {
   // Variable
@@ -28,7 +29,8 @@ const BootcampDetails = (props) => {
     };
     const getReviewList = async () => {
       //do axios call to get the list of review for the selected bootcamp
-
+      let reviewList = await GetReview(1);
+      console.log(reviewList);
       const tempReviewList = [
         {
           id: 1,
@@ -121,9 +123,7 @@ const BootcampDetails = (props) => {
 
   let toRender = (
     <div>
-
       <div>This is details page</div>
-
 
       {bootcampDetailsRender}
     </div>
