@@ -11,16 +11,17 @@ import Register from './pages/Register'
 import SignIn from './pages/SignIn'
 import BootcampDetails from './pages/BootcampDetails'
 
+
 const App = () => {
-  const [authenticated, toggleAuthenticated] = useState(false)
-  const [user, setUser] = useState(null)
+  const [authenticated, toggleAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
 
   const handleLogOut = () => {
     //Reset all auth related state and clear localStorage
-    setUser(null)
-    toggleAuthenticated(false)
-    localStorage.clear()
-  }
+    setUser(null);
+    toggleAuthenticated(false);
+    localStorage.clear();
+  };
 
   return (
     <div className="App">
@@ -57,7 +58,7 @@ const App = () => {
         </Routes>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
