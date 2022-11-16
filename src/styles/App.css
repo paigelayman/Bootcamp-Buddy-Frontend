@@ -129,6 +129,7 @@ height: 75px;
   background-color: #f4b554;
   color: #194648;
   border: none;
+  border-radius: 25px;
   cursor: pointer;
 }
 
@@ -148,10 +149,11 @@ height: 75px;
   justify-content: center;
   width: 400px;
   padding: 5px 20px;
-  margin: auto;
+  margin: 75px auto;
   font-size: 20px;
   background-color: #423e28;
   color: white;
+  border-radius: 25px;
 }
 
 .signin-form {
@@ -159,8 +161,6 @@ height: 75px;
   justify-content: center;
   align-items: center;
   width: 400px;
-  top: 50%;
-  left: 50%;
 }
 
 .signin-form label {
@@ -176,7 +176,7 @@ height: 75px;
 
 .signin-checkbox{
   float: left;
-  margin: 5px -190px;
+  margin: 10px -190px;
   padding: 15px;
 }
 
@@ -189,10 +189,13 @@ height: 75px;
 .register-container {
   display: flex inline-flex;
   justify-content: center;
-  width: 500px;
-  padding-left: 30%;
-  margin: 20px;
+  width: 425px;
+  padding: 5px 20px;
+  margin: 75px auto;
   font-size: 20px;
+  background-color: #423e28;
+  color: white;
+  border-radius: 25px;
 }
 
 .register-header {
@@ -201,12 +204,50 @@ height: 75px;
 
 .register-label {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  padding: 10px;
   font-size: 18px;
+}
+
+.register-label label {
+  display: flex;
+  justify-content: left;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.register-label input {
+  height: 18px;
+}
+
+.register-showpass {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .register-button {
   width: 100%;
   font-size: 18px;
+  height: 30px;
+  font-family: 'Nanum Gothic Coding', monospace;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-top: 40px;
+}
+
+.register-confirm {
+  width: 100%;
+  font-size: 18px;
+  background-color: #f4b554;
+  color: #194648;
+  height: 30px;
+  font-family: 'Nanum Gothic Coding', monospace;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-top: 40px;
 }
