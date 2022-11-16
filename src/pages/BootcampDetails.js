@@ -84,13 +84,21 @@ const BootcampDetails = (props) => {
       <div>Bootcamp comment: </div>
     </div>
   );
-  if (reviewList) {
+  if (bootcampObject && reviewList && props.user) {
     bootcampCommentRender = (
       <div className="bootcamp-review-card">
         {reviewList.map((review) => (
           <ReviewCard key={review.id} review={review} />
         ))}
-        <CreateReview />
+        <CreateReview bootcampId={bootcampObject.id} userId={props.user.id} />
+      </div>
+    );
+  } else if (bootcampObject && reviewList) {
+    bootcampCommentRender = (
+      <div className="bootcamp-review-card">
+        {reviewList.map((review) => (
+          <ReviewCard key={review.id} review={review} />
+        ))}
       </div>
     );
   }

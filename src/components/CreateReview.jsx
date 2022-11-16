@@ -1,25 +1,39 @@
 import { useEffect, useState } from "react";
+import { PostReview } from "../services/ReviewServices";
 
-const CreateReview = (props) => {
-    const [review, setReview] = useState("")
-    let handleChange = (e) => {
-        setReview(e.target.value)
-    }
-    let handleSubmit = () => {
+const CreateReview = ({userId,bootcampId}) => {
+    const [formValues, setFormValues] = useState(
+        {
+            content: "",
+            rating: 5,
+        }
+    )
+
+    const handleChange = (e) => {
+        setFormValues({ ...formValues, [e.target.name]: e.target.value })
+      }
+
+    let handleSubmit = async () => {
         // do submit api call
-        
+        await PostReview(userId,bootcampId,formValues)
         // clean review
-        setReview("")
+        setFormValues(
+            {
+                content: "",
+                rating: 5,
+            }
+        )
     }
     return (
         <div className="create-review">
-            <label className="" htmlFor="comment">Comment</label>
+            <label className="" htmlFor="review">Review</label>
             <textarea
-              id="comment"
+            name="content"
+              id="review"
               cols="30"
               rows="10"
               onChange={handleChange}
-              value={review}
+              value={formValues.content}
             ></textarea>
             <button onClick={handleSubmit} type="submit" className="">
               Submit
