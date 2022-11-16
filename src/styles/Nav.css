@@ -1,0 +1,9 @@
+.nav {
+  /* background-color: black; */
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #304023;
+  font-size: 20px;
+  width: 300px;
+  font-size: 20px;
+}
