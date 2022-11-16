@@ -104,7 +104,7 @@ const BootcampDetails = (props) => {
   if (bootcampObject) {
     bootcampDetailsRender = (
       <div className="details-wrapper">
-        <div className="details-name">{bootcampObject.name}</div>
+        {bootcampObject.name}
         {bootcampDemoDataRender}
         {bootcampCommentRender}
       </div>
@@ -113,7 +113,7 @@ const BootcampDetails = (props) => {
 
   let toRender = (
     <div>
-      <div>{bootcampObject.name}</div>
+      <div>This is details page</div>
       {bootcampDetailsRender}
     </div>
   )
