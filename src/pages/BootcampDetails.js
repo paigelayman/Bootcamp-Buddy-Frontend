@@ -13,54 +13,20 @@ const BootcampDetails = (props) => {
 
   useEffect(() => {
     const getSelectedBootcamp = async () => {
-      //do axios call to get a bootcamp object based on the id
+      // Axios call to get a bootcamp object based on the id
       let bootcamp = await GetBoomcampDetail(bootcampId);
-      //   const tempBootCampObject = {
-      //     id: 1,
-      //     name: "General Assembly",
-      //     website:
-      //       "https://generalassemb.ly/education/software-engineering-immersive-remote",
-      //     location: "New, NY",
-      //     remote: false,
-      //     shortDescription:
-      //       "Your best course for career transformation in tech. This full-time online coding bootcamp features expert instruction, one-on-one career coaching, and connections to top employers to get you hired.",
-      //     description:
-      //       "Your best course for career transformation in tech. This full-time online coding bootcamp features expert instruction, one-on-one career coaching, and connections to top employers to get you hired."
-      //   };
       updateBootcampObject(bootcamp);
     };
     const getReviewList = async () => {
-      //do axios call to get the list of review for the selected bootcamp
+      // Axios call to get the list of review for the selected bootcamp
       let reviewList = await GetReview(bootcampId);
-      //   const tempReviewList = [
-      //     {
-      //       id: 1,
-      //       userId: 1,
-      //       content:
-      //         "adasdakjdhasjkdhalskdjhaskjdhka alsdk jask jdhlaksd aksjdh lashdaksdh klash",
-      //       rating: 5
-      //     },
-      //     {
-      //       id: 10,
-      //       userId: 3,
-      //       content:
-      //         "aksjdhasd ajkshd kjash lskadj hflasd hfakldsfhla lajd flahj",
-      //       rating: 4
-      //     },
-      //     {
-      //       id: 12,
-      //       userId: 7,
-      //       content:
-      //         "alskdjhlakhjd alkdjal; djklajd asjdo lasjkd laksjld ;aks jdlaksjdal;s d;l",
-      //       rating: 5
-      //     }
-      //   ];
       setReviewList(reviewList);
     };
     getSelectedBootcamp();
     getReviewList();
   }, []);
 
+  // Render
   let bootcampDemoDataRender = (
     <div>
       <div>Decription: </div>
