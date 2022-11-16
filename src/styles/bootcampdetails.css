@@ -44,17 +44,6 @@
     color: White;
 }
 
-.bootcamp-review-card{
-    color: #86deb7;
-    background-color: purple;
-    grid-column-start: 2;
-    grid-column-end: 4;
-}
-
 .bootcamp-comment-card{
     background-color: blue;
-}
-
-.review{
-    background-color: orangered;
 }

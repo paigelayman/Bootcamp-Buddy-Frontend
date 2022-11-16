@@ -1,0 +1,25 @@
+.bootcamp-review-card{
+  color: #86deb7;
+  background-color: #040603;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  border-radius: 25px;
+}
+
+.bootcamp-comment-card{
+  background-color: blue;
+}
+
+.review{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #52642f;
+  border-radius: 25px;
+  margin: 10px auto;
+  color: white;
+  padding: 10px 30px;
+  
+}
