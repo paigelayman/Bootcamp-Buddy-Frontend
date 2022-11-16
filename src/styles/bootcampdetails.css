@@ -1,0 +1,28 @@
+.details-wrapper{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+
+.bootcamp-details-card{
+    color:#adeee3;
+    background-color: yellow;
+  
+}
+
+.details-name{
+    color: White;
+}
+
+.bootcamp-review-card{
+    color: #86deb7;
+    background-color: purple;
+}
+
+.bootcamp-comment-card{
+    background-color: blue;
+}
+
+.review{
+    background-color: orangered;
+}
