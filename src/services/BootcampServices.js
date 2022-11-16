@@ -9,3 +9,14 @@ export const GetBootcampList = async () => {
     throw error;
   }
 };
+
+export const GetBoomcampDetail = async (bootcampId) => {
+  try {
+    let response = await axios.get(
+      `http://localhost:3001/api/bootcamps/${bootcampId}`
+    );
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
