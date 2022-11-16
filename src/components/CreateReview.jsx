@@ -12,7 +12,7 @@ const CreateReview = (props) => {
         setReview("")
     }
     return (
-        <div className="">
+        <div className="create-review">
             <label className="" htmlFor="comment">Comment</label>
             <textarea
               id="comment"

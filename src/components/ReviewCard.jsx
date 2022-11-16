@@ -1,7 +1,7 @@
 const ReviewCard = ({review}) => {
 
     return (
-        <div>
+        <div className="review">
             <div>Rating: {review.rating}</div>
             <div>Name: {review.name}</div>
             <div>Review: {review.content}</div>
