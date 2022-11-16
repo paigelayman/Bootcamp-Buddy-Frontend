@@ -121,7 +121,10 @@ const BootcampDetails = (props) => {
 
   let toRender = (
     <div>
-      <div></div>
+
+      <div>This is details page</div>
+
+
       {bootcampDetailsRender}
     </div>
   );
