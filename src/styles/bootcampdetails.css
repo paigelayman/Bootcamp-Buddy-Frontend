@@ -1,15 +1,45 @@
 .details-wrapper{
-    background-color: bisque;
-    display: flex;
-    flex-direction: column;
+
+    display: grid;
+    color: #adeee3;
+    font-size: 50px;
+    font-weight: bold;
+    grid-template-columns: repeat( 3, 1fr) ;
+    grid-template-rows: 50px 1fr 1fr 100px;
+    width: 100vw;
+    height:100vh;
+    font-weight: bold;
+    font-size: 20px;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 20px;
 }
 
 .bootcamp-details-card{
     color:#adeee3;
     background-color: yellow;
-  
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 10px;
+    border-radius: 25px;
 }
 
+.details-name{
+
+}
+
+.bootcamp-details-card > div{
+    color:black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    background-color: orange;
+    border-radius: 25px;
+
+}
 .details-name{
     color: White;
 }
@@ -17,6 +47,8 @@
 .bootcamp-review-card{
     color: #86deb7;
     background-color: purple;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 
 .bootcamp-comment-card{
