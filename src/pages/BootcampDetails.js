@@ -71,7 +71,7 @@ const BootcampDetails = (props) => {
   if (bootcampObject) {
     bootcampDemoDataRender = (
       <div className="bootcamp-details-card">
-        <div>Decription: {bootcampObject.description}</div>
+        <div className="details-name">{bootcampObject.description}</div>
         <div>Website: {bootcampObject.website}</div>
         <div>Location: {bootcampObject.location}</div>
         <div>
