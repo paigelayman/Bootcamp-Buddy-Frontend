@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import CreateReview from "../components/CreateReview";
 import ReviewCard from "../components/ReviewCard";
-import { GetReview } from "../services/ReviewServices";
+import { GetReview, GetAllowToCreateReview } from "../services/ReviewServices";
 import { GetBoomcampDetail } from "../services/BootcampServices";
 
 const BootcampDetails = (props) => {
@@ -11,6 +11,7 @@ const BootcampDetails = (props) => {
   const { bootcampId } = useParams();
   const [reviewList, setReviewList] = useState([]);
   const [needRefresh, setNeedRefresh] = useState(true);
+  const [isAllowToCreateReview, setIsAllowToCreateReview] = useState(false);
 
   useEffect(() => {
     const getSelectedBootcamp = async () => {
@@ -23,9 +24,18 @@ const BootcampDetails = (props) => {
       let reviewList = await GetReview(bootcampId);
       setReviewList(reviewList);
     };
+
+    const getAllowToCreateReview = async () => {
+      // Axios call to check if user already written a review
+      let isAllow = await GetAllowToCreateReview(props.user.id, bootcampId);
+      // let isAllow = await GetAllowToCreateReview(6, 3);
+      setIsAllowToCreateReview(isAllow);
+    };
+
     if (needRefresh) {
       getSelectedBootcamp();
       getReviewList();
+      if (props.user) getAllowToCreateReview();
       setNeedRefresh(false);
     }
   }, [needRefresh]);
@@ -68,11 +78,15 @@ const BootcampDetails = (props) => {
             refresh={setNeedRefresh}
           />
         ))}
-        <CreateReview
-          bootcampId={bootcampObject.id}
-          userId={props.user.id}
-          refresh={setNeedRefresh}
-        />
+        {isAllowToCreateReview ? (
+          <CreateReview
+            bootcampId={bootcampObject.id}
+            userId={props.user.id}
+            refresh={setNeedRefresh}
+          />
+        ) : (
+          <div></div>
+        )}
       </div>
     );
   } else if (bootcampObject && reviewList) {
