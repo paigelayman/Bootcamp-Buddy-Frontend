@@ -24,9 +24,6 @@
     grid-column-end: 2;
     padding-right: 10px;
     border-radius: 25px;
-}
-
-.details-name{
 
 }
 
@@ -38,11 +35,18 @@
     margin: 20px;
     background-color: black;
     border-radius: 25px;
-   box-shadow:  0 5px 10px #50723C;;
+   box-shadow:  0 5px 10px #50723C;
+}
 
+.bootcamp-details-card a{
+    color: #adeee3;
 }
 .details-name{
-    color: White;
+    color: #adeee3;
+    align-items: center;
+    font-size: 50px;
+    height: 60px;
+    border: #50723C;  
 }
 
 .bootcamp-comment-card{
