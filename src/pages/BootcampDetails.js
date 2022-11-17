@@ -10,6 +10,7 @@ const BootcampDetails = (props) => {
   const [bootcampObject, updateBootcampObject] = useState(null);
   const { bootcampId } = useParams();
   const [reviewList, setReviewList] = useState([]);
+  const [needRefresh, setNeedRefresh] = useState(true);
 
   useEffect(() => {
     const getSelectedBootcamp = async () => {
@@ -22,9 +23,12 @@ const BootcampDetails = (props) => {
       let reviewList = await GetReview(bootcampId);
       setReviewList(reviewList);
     };
-    getSelectedBootcamp();
-    getReviewList();
-  }, []);
+    if (needRefresh) {
+      getSelectedBootcamp();
+      getReviewList();
+      setNeedRefresh(false);
+    }
+  }, [needRefresh]);
 
   // Render
   let bootcampDemoDataRender = (
@@ -57,7 +61,12 @@ const BootcampDetails = (props) => {
     bootcampCommentRender = (
       <div className="bootcamp-review-card">
         {reviewList.map((review) => (
-          <ReviewCard key={review.id} review={review} />
+          <ReviewCard
+            key={review.id}
+            review={review}
+            currentUser={props.user.id}
+            refresh={setNeedRefresh}
+          />
         ))}
         <CreateReview bootcampId={bootcampObject.id} userId={props.user.id} />
       </div>
