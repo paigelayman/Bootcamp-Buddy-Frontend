@@ -35,7 +35,6 @@ const CreateReview = ({userId,bootcampId,refresh}) => {
               value={formValues.content}
             ></textarea>
             <label className="" htmlFor="rating">Rating</label>
-            <button onClick={handleSubmit} type="submit" className="">
             <input
           onChange={handleChange}
           value={formValues.rating}
@@ -43,6 +42,7 @@ const CreateReview = ({userId,bootcampId,refresh}) => {
           type="text"
           required
         />
+        <button onClick={handleSubmit} type="submit" className="">
               Submit
             </button>
           </div>

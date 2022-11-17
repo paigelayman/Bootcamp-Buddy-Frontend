@@ -36,6 +36,7 @@ const ReviewCard = ({review,currentUser,refresh}) => {
     return (
         <div>
             {isEditMode ? <div className="review">
+            <div>Name: {review.name}</div>
             <div>Rating: <input
           onChange={handleChange}
           value={formValues.rating}
@@ -43,7 +44,6 @@ const ReviewCard = ({review,currentUser,refresh}) => {
           type="text"
           required
         /></div>
-            <div>Name: {review.name}</div>
             <div>Review: <textarea
             name="content"
               id="review"
@@ -52,14 +52,14 @@ const ReviewCard = ({review,currentUser,refresh}) => {
               onChange={handleChange}
               value={formValues.content}
             ></textarea></div>
-            {review.userId===currentUser ? <button onClick={cancelEdit}>Cancel Edit</button> : <div></div>}
-            {review.userId===currentUser ? <button onClick={updateReview}>Update Review</button> : <div></div>}
+            {review.userId===currentUser ? <button onClick={cancelEdit}>Cancel</button> : <div></div>}
+            {review.userId===currentUser ? <button onClick={updateReview}>Update</button> : <div></div>}
         </div> : <div className="review">
+        <div>Name: {review.name}</div>
             <div>Rating: {review.rating}</div>
-            <div>Name: {review.name}</div>
             <div>Review: {review.content}</div>
-            {review.userId===currentUser ? <button onClick={editReview}>Edit Review</button> : <div></div>}
-            {review.userId===currentUser ? <button onClick={deleteReview}>Delete Review</button> : <div></div>}
+            {review.userId===currentUser ? <button onClick={editReview}>Edit</button> : <div></div>}
+            {review.userId===currentUser ? <button onClick={deleteReview}>Delete</button> : <div></div>}
         </div>}
         </div>
         
