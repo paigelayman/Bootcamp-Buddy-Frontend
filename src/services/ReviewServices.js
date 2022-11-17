@@ -20,3 +20,12 @@ export const GetReview = async (bootcampId) => {
     throw error;
   }
 };
+
+export const DeleteReview = async (userId, reviewId) => {
+  try {
+    const res = await Client.delete(`/api/reviews/${userId}/${reviewId}`);
+    return res.data;
+  } catch (error) {
+    throw error;
+  }
+};
