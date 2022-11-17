@@ -7,3 +7,23 @@
   width: 300px;
   font-size: 20px;
 }
+
+.signin-nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #304023;
+  color: white;
+  font-size: 20px;
+  width: 300px;
+  font-size: 20px;
+}
+
+button {
+	background: none;
+	color: #adeee3;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
