@@ -4,10 +4,21 @@
   grid-column-start: 2;
   grid-column-end: 4;
   border-radius: 25px;
+  /* margin: auto 20% ; */
+  margin-right: 20% ;
 }
 
-.bootcamp-comment-card{
-  background-color: blue;
+.create-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 25px;
+  margin: 20px;
+  color: #adeee3;
+  padding: 20px;
+  box-shadow: 0 5px 10px #52642f;
 }
 
 .review{
@@ -22,4 +33,35 @@
   color: #adeee3;
   padding: 10px 30px;
   box-shadow: 0 5px 10px #52642f;
+}
+
+.review-text {
+  margin: 10px auto;
+}
+
+.review-textbox {
+  margin: auto;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+}
+
+.rating-text {
+  margin: 10px auto;
+}
+
+.rating-input {
+  margin: auto;
+  width: 100%;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.submit-review {
+  margin: 20px auto 0;
+  width: 100%;
+  background-color: #52642f;
+  border-radius: 25px;
+  padding: 5px;
 }

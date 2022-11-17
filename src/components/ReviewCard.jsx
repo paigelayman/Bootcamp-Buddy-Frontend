@@ -64,14 +64,14 @@ const ReviewCard = ({review,currentUser,refresh}) => {
               onChange={handleChange}
               value={formValues.content}
             ></textarea></div>
-            {review.userId===currentUser ? <button onClick={cancelEdit}>Cancel</button> : <div></div>}
-            {review.userId===currentUser ? <button onClick={updateReview}>Update</button> : <div></div>}
+            {review.userId===currentUser ? <button className="review-buttons" onClick={cancelEdit}>Cancel</button> : <div></div>}
+            {review.userId===currentUser ? <button className="review-buttons" onClick={updateReview}>Update</button> : <div></div>}
         </div> : <div className="review">
         <div>Name: {userName}</div>
             <div>Rating: {review.rating}</div>
             <div>Review: {review.content}</div>
-            {review.userId===currentUser ? <button onClick={editReview}>Edit</button> : <div></div>}
-            {review.userId===currentUser ? <button onClick={deleteReview}>Delete</button> : <div></div>}
+            {review.userId===currentUser ? <button className="review-buttons" onClick={editReview}>Edit</button> : <div></div>}
+            {review.userId===currentUser ? <button className="review-buttons" onClick={deleteReview}>Delete</button> : <div></div>}
         </div>}
         </div>
         
