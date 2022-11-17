@@ -21,6 +21,17 @@ export const GetReview = async (bootcampId) => {
   }
 };
 
+export const GetAllowToCreateReview = async (userId, bootcampId) => {
+  try {
+    let response = await axios.get(
+      `http://localhost:3001/api/reviews/check/${userId}/${bootcampId}`
+    );
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const DeleteReview = async (userId, reviewId) => {
   try {
     const res = await Client.delete(`/api/reviews/${userId}/${reviewId}`);
