@@ -16,10 +16,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #52642f;
+  background-color: black;
   border-radius: 25px;
-  margin: 10px auto;
-  color: white;
+  margin: 10px 20px;
+  color: #adeee3;
   padding: 10px 30px;
-  
+  box-shadow: 0 5px 10px #52642f;
 }
