@@ -7,6 +7,7 @@
 }
 body{
   background-color: black;
+  overflow: hidden; 
 }
 
 .container {
@@ -26,6 +27,7 @@ width: 150px;
 }
 
 header{
+
 display: flex;
 justify-content: space-between;
 background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("https://us.123rf.com/450wm/tatus/tatus1412/tatus141200001/34192460-seamless-camouflage-pattern.jpg?ver=6");
@@ -64,12 +66,17 @@ ul{
   grid-gap: 5px;
   align-content: space-between;
   align-items: stretch;
-
 }
 
+.bootcamp-list{
+  margin:20px;
+  padding:30px
+}
 
 .bootcamp-card{
-
+display: flex;
+flex-direction: column;
+align-items: center;
  padding:50px;
  height: 200px;
  width: 200px;
@@ -89,27 +96,30 @@ ul{
 .bootcamp-name{
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: #50723C;
-  height: 50px;
-  width: 50px;
-  font-size: 15px;
+  height: 100px;
+  width: 100px;
+  font-size: 25px;
   flex-shrink: inherit;
   color:#adeee3;
+  font-weight: bolder;
   background-image:  url("https://us.123rf.com/450wm/tatus/tatus1412/tatus141200001/34192460-seamless-camouflage-pattern.jpg?ver=6");
   border: #423E28;
   border-style: outset;
   border-width: 15px;
+  text-shadow: 5px 5px 5px #121212;
+  margin: 0;
+  padding: 0;
 }
 
 .bootcamp-description{
 font-size:10px;
 color:#63B995;
-
 padding: 0 20px 20px;
-width:150px;
+width:200px;
 height: 75px;
-
 }
 }
 
