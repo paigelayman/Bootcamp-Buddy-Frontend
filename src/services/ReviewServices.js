@@ -10,6 +10,15 @@ export const PostReview = async (userId, bootcampId, data) => {
   }
 };
 
+export const UpdateReview = async (reviewId, data) => {
+  try {
+    const res = await Client.put(`/api/reviews/${reviewId}`, data);
+    return res.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const GetReview = async (bootcampId) => {
   try {
     let response = await axios.get(

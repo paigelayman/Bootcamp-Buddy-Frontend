@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { DeleteReview } from "../services/ReviewServices"
+import { DeleteReview,UpdateReview } from "../services/ReviewServices"
 const ReviewCard = ({review,currentUser,refresh}) => {
     const [isEditMode, setIsEditMode] = useState(false)
     const [formValues, setFormValues] = useState(
@@ -21,9 +21,11 @@ const ReviewCard = ({review,currentUser,refresh}) => {
         setIsEditMode(false)
     }
 
-    const updateReview = () => {
+    const updateReview = async () => {
         // Axios call with JWT to edit review
-        console.log("Still cooking the update Review function")
+        await UpdateReview(review.id, formValues)
+        refresh(true)
+        setIsEditMode(false)
     }
 
     const deleteReview = async () => {
