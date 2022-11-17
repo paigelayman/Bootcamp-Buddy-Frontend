@@ -39,8 +39,8 @@ const BootcampDetails = (props) => {
     bootcampDemoDataRender = (
       <div className="bootcamp-details-card">
         <div className="details-name">{bootcampObject.description}</div>
-        <div>Website: {bootcampObject.website}</div>
-        <div>Location: {bootcampObject.location}</div>
+        <div>{bootcampObject.website}</div>
+        <div>{bootcampObject.location}</div>
         <div>
           Remote option {bootcampObject.remote ? "is" : "is not"} available.
         </div>
