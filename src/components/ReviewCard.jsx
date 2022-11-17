@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { DeleteReview,UpdateReview } from "../services/ReviewServices"
+import { GetUser } from "../services/UserServices";
 const ReviewCard = ({review,currentUser,refresh}) => {
     const [isEditMode, setIsEditMode] = useState(false)
+    const [userName, setUserName] = useState("")
     const [formValues, setFormValues] = useState(
         {
             content: review.content,
             rating: review.rating,
         }
     )
+
 
     const handleChange = (e) => {
         setFormValues({ ...formValues, [e.target.name]: e.target.value })
@@ -33,10 +36,19 @@ const ReviewCard = ({review,currentUser,refresh}) => {
         refresh(true)
     }
 
+    useEffect(()=>{
+        const getUserName = async() =>{
+            let userObject =await GetUser(review.userId)
+            let name = userObject.firstName
+            setUserName(name)
+        }
+        getUserName();
+    },[])
+
     return (
         <div>
             {isEditMode ? <div className="review">
-            <div>Name: {review.name}</div>
+            <div>Name: {userName}</div>
             <div>Rating: <input
           onChange={handleChange}
           value={formValues.rating}
@@ -55,7 +67,7 @@ const ReviewCard = ({review,currentUser,refresh}) => {
             {review.userId===currentUser ? <button onClick={cancelEdit}>Cancel</button> : <div></div>}
             {review.userId===currentUser ? <button onClick={updateReview}>Update</button> : <div></div>}
         </div> : <div className="review">
-        <div>Name: {review.name}</div>
+        <div>Name: {userName}</div>
             <div>Rating: {review.rating}</div>
             <div>Review: {review.content}</div>
             {review.userId===currentUser ? <button onClick={editReview}>Edit</button> : <div></div>}
