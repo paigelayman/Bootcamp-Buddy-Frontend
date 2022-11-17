@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { PostReview } from "../services/ReviewServices";
 
-const CreateReview = ({userId,bootcampId}) => {
+const CreateReview = ({userId,bootcampId,refresh}) => {
     const [formValues, setFormValues] = useState(
         {
             content: "",
@@ -14,15 +14,14 @@ const CreateReview = ({userId,bootcampId}) => {
       }
 
     let handleSubmit = async () => {
-        // do submit api call
         await PostReview(userId,bootcampId,formValues)
-        // clean review
         setFormValues(
             {
                 content: "",
                 rating: 5,
             }
         )
+        refresh(true);
     }
     return (
         <div className="create-review">

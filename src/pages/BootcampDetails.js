@@ -68,7 +68,11 @@ const BootcampDetails = (props) => {
             refresh={setNeedRefresh}
           />
         ))}
-        <CreateReview bootcampId={bootcampObject.id} userId={props.user.id} />
+        <CreateReview
+          bootcampId={bootcampObject.id}
+          userId={props.user.id}
+          refresh={setNeedRefresh}
+        />
       </div>
     );
   } else if (bootcampObject && reviewList) {
