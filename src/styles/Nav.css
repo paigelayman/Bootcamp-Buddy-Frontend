@@ -27,3 +27,9 @@ button {
 	cursor: pointer;
 	outline: inherit;
 }
+
+.create-review {
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+}
