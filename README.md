@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Bootcamp Buddy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Date: 11/18/2022
 
-In the project directory, you can run:
+## By:
 
-### `npm start`
+[Fredy Laksmono](https://www.linkedin.com/in/fredy-laksmono/), [LaShelle Rauseo](https://www.linkedin.com/in/lashelle-rauseo/), [Paige Layman](https://www.linkedin.com/in/paige-layman/),[Bret Borden](https://www.linkedin.com/in/bret-borden/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[App](https://bootcamp-buddy-app.herokuapp.com/)|[GitHub](https://github.com/paigelayman/bootcamp-buddy-frontend)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+![Logo](/images/bootcamp-buddy-logo.png)
+"Bootcamp Buddy is a tool for Software Engineers across the globe. Users are just one click away from getting basic information about any bootcamp, as well as read the personal reviews of attendees. Browse as a guest, or get involved by creating an account and placing a review for any bootcamp you have attended!"
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When you open the app you are able to view all bootcamps in the database.  
+![Home Page Screenshot](/images/screenshot-home.png)
+Click on any Bootcamp to get access to the details page, where you get information about that specific bootcamp, as well as read and create reviews.
+You can register with your first name, last name, e-mail, in order to create a review. You are only able to create one review per bootcamp, however, you can edit and delete your comment.
+![Register Page Screenshot](/images/screenshot-register.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Planning
 
-### `npm run eject`
+![Wireframe](/images/bootcamp-buddy-wireframe.png),
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-PostgreSQL
+-Express
+-React
+-Node
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project was deployed [here](https://id.heroku.com/login)
 
-### `npm run build` fails to minify
+##Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credits
+
+-[Google](https://www.google.com/) -[W3 Schools](https://www.w3schools.com/) -[Canva](https://www.canva.com/) -[Coolers](https://coolors.co/)

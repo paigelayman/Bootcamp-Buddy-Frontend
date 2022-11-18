@@ -4,14 +4,12 @@
   grid-column-start: 2;
   grid-column-end: 4;
   border-radius: 25px;
-
   /* FL-Conflict while merging, please decide which way we want to use */
   /* margin: auto 20% ; */
   margin-right: 20% ;
   /* Above, Bret code, below main*/
   margin:50px;
   /* FL-Conflict while merging, please decide which way we want to use */
-
 }
 
 .create-review {

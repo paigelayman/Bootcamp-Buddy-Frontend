@@ -46,6 +46,7 @@ const ReviewCard = ({review,currentUser,refresh}) => {
     },[])
 
     return (
+  
         <div>
             {isEditMode ? <div className="review">
             <div>Name: {userName}</div>
@@ -73,8 +74,7 @@ const ReviewCard = ({review,currentUser,refresh}) => {
             {review.userId===currentUser ? <button className="review-buttons" onClick={editReview}>Edit</button> : <div></div>}
             {review.userId===currentUser ? <button className="review-buttons" onClick={deleteReview}>Delete</button> : <div></div>}
         </div>}
-        </div>
-        
+        </div>   
     )
 }
 
