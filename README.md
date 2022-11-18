@@ -29,7 +29,7 @@ You can register with your first name, last name, e-mail, in order to create a r
 
 ## Planning
 
-![Wireframe](/images/bootcamp-buddy-wireframe.png),
+![Wireframe](/images/bootcamp-buddy-wireframe.png)
 
 ### Technologies Used
 
@@ -40,10 +40,8 @@ You can register with your first name, last name, e-mail, in order to create a r
 
 ### Deployment
 
-This project was deployed [here](https://id.heroku.com/login)
-
-##Credits
+This project was deployed [here](https://id.heroku.com/login).
 
 ## Credits
 
--[Google](https://www.google.com/) -[W3 Schools](https://www.w3schools.com/) -[Canva](https://www.canva.com/) -[Coolers](https://coolors.co/)
+- [W3 Schools](https://www.w3schools.com/) - [Canva](https://www.canva.com/) - [Coolers](https://coolors.co/)
