@@ -19,16 +19,17 @@ const BootcampCard = ({bootcamp, user, userBootcamps}) => {
         setIsJoined(false)
     }
 
-
-        if (userBootcamps && isJoined === false){
-            console.log("run here")
-            for (let i = 0; i<userBootcamps.length; i++){
-                if(bootcamp.id === userBootcamps[i].bootcampId){
-                    setIsJoined(true);
-                    break;
+        useEffect(()=>{
+            if (userBootcamps){
+                for (let i = 0; i<userBootcamps.length; i++){
+                    if(bootcamp.id === userBootcamps[i].bootcampId){
+                        setIsJoined(true);
+                        break;
+                    }
                 }
             }
-        }
+        },[])
+
 
     let joinButtonRender = <div></div>
     if(user && isJoined){
