@@ -9,6 +9,7 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
     password: ""
   });
   const [isShowPassword, toggleIsShowPassword] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   let navigate = useNavigate();
 
   // Function
@@ -22,16 +23,21 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("value", formValues);
-    const payload = await SignInUser(formValues);
-    console.log(payload);
-    setFormValues({
-      email: "",
-      password: ""
-    });
-    setUser(payload);
-    toggleAuthenticated(true);
-    navigate(-1);
+    setErrorMessage("");
+    try {
+      console.log("value", formValues);
+      const payload = await SignInUser(formValues);
+      console.log(payload);
+      setFormValues({
+        email: "",
+        password: ""
+      });
+      setUser(payload);
+      toggleAuthenticated(true);
+      navigate(-1);
+    } catch (error) {
+      setErrorMessage(error.response.data.msg);
+    }
   };
 
   const handleRegister = () => {
@@ -88,6 +94,11 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
     );
   }
 
+  let errorMessageRender = <div></div>;
+  if (errorMessage) {
+    errorMessageRender = <div>{errorMessage}</div>;
+  }
+
   let signInRender = (
     <div>
       <div className="signin-form">to your account here</div>
@@ -104,6 +115,7 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
         </div>
         <br />
         {passwordFieldRender}
+        {errorMessageRender}
         <button className="login-button">Login</button>
       </form>
       <div className="signin-form">
