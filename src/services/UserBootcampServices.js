@@ -1,31 +1,31 @@
-import Client from "./api";
-import axios from "axios";
+import Client from './api'
+import axios from 'axios'
 
 export const JoinBootcamp = async (bootcampId) => {
   try {
-    const res = await Client.post(`/api//userbootcamps/${bootcampId}`);
-    return res.data;
+    const res = await Client.post(`/api//userbootcamps/${bootcampId}`)
+    return res.data
   } catch (error) {
-    throw error;
+    throw error
   }
-};
+}
 
 export const GetUserBootcamp = async (userId) => {
   try {
     let response = await axios.get(
-      `http://localhost:3001/api/userbootcamps/${userId}`
-    );
-    return response.data;
+      `https://bootcamp-buddy-backend.herokuapp.com/api/userbootcamps/${userId}`
+    )
+    return response.data
   } catch (error) {
-    throw error;
+    throw error
   }
-};
+}
 
 export const LeaveBootcamp = async (bootcampId) => {
   try {
-    const res = await Client.delete(`/api//userbootcamps/${bootcampId}`);
-    return res.data;
+    const res = await Client.delete(`/api//userbootcamps/${bootcampId}`)
+    return res.data
   } catch (error) {
-    throw error;
+    throw error
   }
-};
+}
