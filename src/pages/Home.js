@@ -21,7 +21,6 @@ const Home = ({ user }) => {
 
     if (needRefresh) {
       if (user) {
-        console.log("run");
         getCurrentUserBootcamp();
       }
       getAllBootcamp();

@@ -25,9 +25,7 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
     e.preventDefault();
     setErrorMessage("");
     try {
-      console.log("value", formValues);
       const payload = await SignInUser(formValues);
-      console.log(payload);
       setFormValues({
         email: "",
         password: ""

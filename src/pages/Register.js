@@ -26,7 +26,6 @@ const Register = ({ setUser, toggleAuthenticated }) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //do function await check email, if failed provide user
     setErrorMessage("");
     try {
       const registerUser = await RegisterUser({
@@ -35,7 +34,7 @@ const Register = ({ setUser, toggleAuthenticated }) => {
         email: formValues.email,
         password: formValues.password
       });
-      //do await login function for user automatically to get the token session
+
       const payload = await SignInUser({
         email: formValues.email,
         password: formValues.password
@@ -52,9 +51,7 @@ const Register = ({ setUser, toggleAuthenticated }) => {
       navigate("/");
     } catch (error) {
       if (error.response.data.msg == "Email already in use.") {
-        console.log(error.response.data.msg);
         setErrorMessage(error.response.data.msg);
-        console.log("done");
       } else {
         throw error;
       }

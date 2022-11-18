@@ -11,7 +11,6 @@ const ReviewCard = ({review,currentUser,refresh}) => {
         }
     )
 
-
     const handleChange = (e) => {
         setFormValues({ ...formValues, [e.target.name]: e.target.value })
       }
@@ -45,18 +44,18 @@ const ReviewCard = ({review,currentUser,refresh}) => {
         getUserName();
     },[])
 
-    return (
-  
+    return ( 
         <div>
             {isEditMode ? <div className="review">
             <div>Name: {userName}</div>
             <div>Rating: <input
-          onChange={handleChange}
-          value={formValues.rating}
-          name="rating"
-          type="text"
-          required
-        /></div>
+            onChange={handleChange}
+            value={formValues.rating}
+            name="rating"
+            type="text"
+            required
+            />
+        </div>
             <div>Review: <textarea
             name="content"
               id="review"
