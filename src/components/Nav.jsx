@@ -16,7 +16,6 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
     const publicOptions = (
       <nav className="nav">
         <ul>
-        {/* <Link to="/">Home</Link> */}
         <Link to="/register" style={{textDecoration: 'none'}}><li>Register |</li></Link>
         <Link to="/signin" style={{textDecoration: 'none'}}><li>| Sign In</li></Link>
         </ul>
@@ -36,7 +35,6 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
           </div>
         </Link>
         <ul className="nav-links">
-   
         </ul>
         {authenticated && user ? authenticatedOptions : publicOptions}
       </header>
